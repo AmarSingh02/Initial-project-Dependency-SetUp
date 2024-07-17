@@ -9,10 +9,11 @@ Hey Dev's
 <div className="text-center">
 
 
-<p>To run npm  <strong>npm run start:preprod</strong> </p>
+<p>To run npm  <strong>npm run start:preprod</strong> .  After Run open console and test whether your Dependency running or not </p>
 <p>To run npm  <strong>npm run start:production</strong> </p>
 <p>To run build  <strong>npm run build:preprod</strong> </p>
 <p>To run build  <strong>npm run build:production</strong> </p>
+
 <h4>More Info Visit to package.json file and Environment.js </h4>
 </div>
 
