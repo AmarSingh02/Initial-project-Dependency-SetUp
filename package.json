@@ -1,0 +1,67 @@
+{
+  "name": "React dependencies Setup",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "saas": "^1.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start:preprod": "env-cmd -f .env.preprod react-scripts start",
+    "start:production": "env-cmd -f .env.production react-scripts start",
+    "build:preprod": "env-cmd -f .env.preprod react-scripts build",
+    "build:production": "env-cmd -f .env.production react-scripts build",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "beautify": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
+    "beautify-check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "husky"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.4",
+    "globals": "^15.8.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.3"
+  }
+}
